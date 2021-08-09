@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index.html</title>
+    <link rel="stylesheet" href="css/main.scss">
+</head>
+<body>
+
+<style>
+
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #090920;
+    overflow-x: hidden;
+    transition: 0.9s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #db350b;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px){
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+button.accordion {
+    background-color: #cdcedd;
+    color: #7511a3;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+    transition: 0.9s;
+}
+
+button.accordion.active, button.accordion:
+hover {
+    background-color: #ddd;
+}
+
+button.accordion:after {
+
+/* Unicode character for "plus" sign (+)
+is '\02795' */ 
+
+    content: '\02795';
+    font-size: 13px;
+    color: rgba(29, 3, 5, 0.192);
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+
+/* Unicode character for "minus" sign (-)
+is '\2796' */ 
+
+    content: "\2796";
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: rgb(206, 120, 124);
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.9s ease-in-out;
+    opacity: 0;
+}
+
+div.panel.show {
+    opacity: 3;
+    max-height: 1000px;
+}
+
+</style>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)"
+  class="closebtn"
+  onclick="closeNav()">&times;</a>
+  <button class="accordion">Terms and conditions</button>
+<div class="panel">
+  <p>T&Cs apply
+    Client must be 18 years of action_page
+    No ads at the group platform.</p>
+</div>
+
+<button class="accordion">About us</button>
+<div class="panel">
+  <p>Gigainvestment is platform patnering with
+      many investors developed where anyone
+      above 18 years of age can invest within one's
+      desired period.</p>
+</div>      
+
+<button class="accordion">Helpline</button>
+<div class="panel">
+  <p>Contact admn
+    <a href="gmail.com">
+      <h4>admngiga@gmail.com</h4></a>
+  </p>
+</div>
+<button class="accordion">invets in 72 hours</button>
+<div class="panel"><p>15% interest in less than 72hrs.
+    <span class="psw">
+        <a href="invest"><h3>INVEST NOW</h3></a>
+    </span>
+</p>
+</div>
+<button class="accordion">Invest in 5days</button>
+<div class="panel">
+  <p> Invest in 5 days and get 20% interest.</p>
+  <span class="psw">
+    <a href="invest"><h5>INVEST NOW</h5></a>
+</span>
+</div>
+<button class="accordion"> Withdraw Earnings</button>
+<div class="panel">
+  <span class="psw">
+    <a href="withdraw"><h5>withdraw$$</h5></a>
+  </span>
+</div>
+
+</div>
+
+<div id="main">
+  <h4><Gigainvestment</h4>
+</div>  
+  <head> 
+
+    <style>
+    
+    .dropbtn {
+        background-color: #6495ed;
+        color: purple;
+        padding: 36px;
+        font-size: 50px;
+        border: none;
+        cursor: pointer;
+    }
+    
+    
+    </style>
+    </head>
+    
+    <body>
+    
+    <div class="Gigainvestment">
+    <button class="dropbtn">Gigainvestment
+    </button>
+     
+    
+    </div>
+    
+
+<p><h3>Click open to navigate dashboard</h3></p>
+
+  <span style="font-size:30px;cursor:
+  pointer"
+
+  onclick="openNav()">&#9776; open
+  </span>
+
+</div>
+
+<script>
+
+/* Set the width of the side navigation to
+250px and the left margin of the page content
+to 250px and add a black background color to
+body */ 
+
+function openNav() {
+ document.getElementById("mySidenav")
+ .style.width="250px";
+
+ document.getElementById("main")
+ .style.marginLeft="250px";
+
+ document.body.style.backgroundColor=
+ "rgba(0,0,0,0.4)";
+
+}
+
+function closeNav() {
+ document.getElementById("mySidenav")
+ .style.width = "0";
+
+ document.getElementById("main")
+ .style.marginLeft= "0";
+
+ document.body.style.backgroundColor =
+ "white";
+
+}
+
+var acc = document.getElementsByClassName
+("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+ acc[i].onclick = function(){
+  this.classList.toggle("active");
+  this.nextElementSibling.classList.
+  toggle("show");
+  }
+}
+
+</script>
+     <style>
+
+/* Full-width input fields */
+
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(212, 203, 203);
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+
+button {
+    background-color: #4682b4;
+    color: #00008B;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #4a1bb6;
+}
+
+/* Center the image and position
+the close button */
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+Gigainvestment {
+    width: 50%;
+    border-radius: 10%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+
+.modal {
+   display: none;
+   position: fixed;
+   z-index: 1;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+   background-color: #777;
+   background-color: #000000;
+   padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #85b0e9;
+    margin: 5% auto 15% auto;
+    border: 1px solid rgb(38, 233, 13);
+    width: 90%;
+}
+
+/* The Close Button (x) */
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */ 
+
+.animate {
+ -webkit-animation: animatezoom 1s;
+ animation: animatezoom 1s
+}
+
+@-webkit-keyframes animatezoom {
+ from {-webkit-transform: scale(0)}
+ to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel
+button on extra small screens */ 
+
+@media screen and(max-width: 30px){
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+</style>
+<body>
+  <div>
+    <body style="background-color: #c8cca9;">  
+  <h2 style="text-align: center">  <p>Earn and make money from your mobile</p>
+  <hr><p>wow.lets earn now!</p></h2>
+    </body>
+  </h2>
+  </div>
+
+<button onclick="document.
+getElementById('id01')
+
+.style.display='block'"
+style="width:auto;">CREATE ACCOUNT
+</button>
+
+<div id="id01" class="modal">
+
+<form class="modal-content animate"
+action="action_page.php">
+<div class="imgcontainer">
+<span onclick="document
+.getElementById('id01')
+
+.style.display='none'"
+class="close" title="Close Modal">
+    &times;</span>
+
+ <img src="IMG_20210808_103655.jpg"
+  alt="image"
+  class="image">
+
+    </div>
+
+ <div class="container">
+  <label><b>Username</b></label>
+  <input type="text" placeholder=
+  "Enter Username"
+  name="uname" required>
+
+<label><b>Password</b></label>
+<input type="password" placeholder=
+"Enter Password" name="psw" required>
+
+<label><b>confirm password</b></label>
+<input type="password" placeholder="Confirm password"
+name="psw" required>
+<button type="submit">Sign up</button>
+<input type="checkbox"
+checked="checked">
+Remember me
+</div>
+
+ <div class="container"
+ style="background-color:#c9b6b6">
+ <button type="button"
+ onclick="document.getElementById
+ ('id01').style.
+
+ <span class="psw">already have an
+ <a href="login">account?</a>
+</span></button>
+</div>
+
+<div>
+  <style>body {transition: opacity ease-in 0.2s; } 
+    body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+    </style>
+        <title>Google Developers</title>
+        <meta name="robots" content="noindex">
+        
+        <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="iframe" content="standalone">
+        
+        
+        <script src="./cb=gapi.loaded_0" nonce="R9xrYO5W4Npdwyj/9qp1XtFC0EvzWu" async=""></script><script async="" src="./app_loader.js.download"></script><script nonce="R9xrYO5W4Npdwyj/9qp1XtFC0EvzWu">
+          (function(){
+            window.framebox=window.framebox||function(){(window.framebox.q=window.framebox.q||[]).push(arguments)};
+            
+            var a={},b=function(){(window.framebox.dq=window.framebox.dq||[]).push(arguments)};
+            ['getUrl','handleLinkClicksInParent','initAutoSize','navigate','pushState','replaceState',
+             'requestQueryAndFragment','sendEvent','updateSize'].forEach(function(x){a[x]=function(){
+              b(x,arguments)}});
+            window.devsite={framebox:{AutoSizeClient:a}};
+          })();
+          
+          (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+            t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+            E.parentNode.insertBefore(t,E);})(window, document, 'script',
+            'https://www.gstatic.com/devrel-devsite/prod/v3c2319be42ec37c76448426e64c5186bfb85c07b78d714f8abe2af99733028ed/developers/js/app_loader.js', '[1,"en",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/v3c2319be42ec37c76448426e64c5186bfb85c07b78d714f8abe2af99733028ed","https://www.gstatic.com/devrel-devsite/prod/v3c2319be42ec37c76448426e64c5186bfb85c07b78d714f8abe2af99733028ed/developers","https://developers-dot-devsite-v2-prod.appspot.com",null,1,null,1,null,[1,6,8,12,14,17,21,25,40,50,63,70,75,76,80,87,88,91,92,93,97,98,100,101,102,103,104,105,107,108,111,112,113,115,116,117,118,120,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,138],"AIzaSyAP-jjEJBzmIyKR4F-3XITp8yM9T1gEEI8","AIzaSyB6xiKGDR5O3Ak2okS4rLkauxGUG7XP0hg"]')
+          
+          </script>
+        
+      <script src="./webcomponents-lite.js.download" nonce="R9xrYO5W4Npdwyj/9qp1XtFC0EvzWu"></script><script src="./devsite_app_module.js.download" nonce="R9xrYO5W4Npdwyj/9qp1XtFC0EvzWu"></script><style>.abcRioButton{border-radius:1px;box-shadow:0 2px 4px 0 rgba(0,0,0,.25);-moz-box-sizing:border-box;box-sizing:border-box;-webkit-transition:background-color .218s,border-color .218s,box-shadow .218s;transition:background-color .218s,border-color .218s,box-shadow .218s;-webkit-user-select:none;-webkit-appearance:none;background-color:#fff;background-image:none;color:#262626;cursor:pointer;outline:none;overflow:hidden;position:relative;text-align:center;vertical-align:middle;white-space:nowrap;width:auto}.abcRioButton:hover{box-shadow:0 0 3px 3px rgba(66,133,244,.3)}.abcRioButtonBlue{border:none;color:#fff}.abcRioButtonBlue,.abcRioButtonBlue:hover{background-color:#4285f4}.abcRioButtonBlue:active{background-color:#3367d6}.abcRioButtonLightBlue{background-color:#fff;color:#757575}.abcRioButtonLightBlue:active{background-color:#eee;color:#6d6d6d}.abcRioButtonIcon{float:left}.abcRioButtonBlue .abcRioButtonIcon{background-color:#fff;border-radius:1px}.abcRioButtonSvg{display:block}.abcRioButtonContents{font-family:Roboto,arial,sans-serif;font-size:14px;font-weight:500;letter-spacing:.21px;margin-left:6px;margin-right:6px;vertical-align:top}.abcRioButtonContentWrapper{height:100%;width:100%}.abcRioButtonBlue .abcRioButtonContentWrapper{border:1px solid transparent}.abcRioButtonErrorWrapper,.abcRioButtonWorkingWrapper{display:none;height:100%;width:100%}.abcRioButtonErrorIcon,.abcRioButtonWorkingIcon{margin-left:auto;margin-right:auto}.abcRioButtonErrorState,.abcRioButtonWorkingState{border:1px solid #d5d5d5;border:1px solid rgba(0,0,0,.17);box-shadow:0 1px 0 rgba(0,0,0,.05);color:#262626}.abcRioButtonErrorState:hover,.abcRioButtonWorkingState:hover{border:1px solid #aaa;border:1px solid rgba(0,0,0,.25);box-shadow:0 1px 0 rgba(0,0,0,.1)}.abcRioButtonErrorState:active,.abcRioButtonWorkingState:active{border:1px solid #aaa;border:1px solid rgba(0,0,0,.25);box-shadow:inset 0 1px 0 #ddd;color:#262626}.abcRioButtonWorkingState,.abcRioButtonWorkingState:hover{background-color:#f5f5f5}.abcRioButtonWorkingState:active{background-color:#e5e5e5}.abcRioButtonErrorState,.abcRioButtonErrorState:hover{background-color:#fff}.abcRioButtonErrorState:active{background-color:#e5e5e5}.abcRioButtonErrorState .abcRioButtonErrorWrapper,.abcRioButtonWorkingState .abcRioButtonWorkingWrapper{display:block}.abcRioButtonErrorState .abcRioButtonContentWrapper,.abcRioButtonErrorState .abcRioButtonWorkingWrapper,.abcRioButtonWorkingState .abcRioButtonContentWrapper{display:none} .-webkit-keyframes abcRioButtonWorkingIconPathSpinKeyframes {0% {-webkit-transform: rotate(0deg)}}</style></head>
+      
+      <body ready="">
+        
+    
+      <meta name="google-signin-client_id" content="351360855136-c65vr13tal2in9b9m1hdmp5dgr4rie3l.apps.googleusercontent.com">
+    
+    <!-- [START body] -->
+    
+      <div id="my-signin2"><div style="height:50px;width:240px;" class="abcRioButton abcRioButtonBlue"><div class="abcRioButtonContentWrapper"><div class="abcRioButtonIcon" style="padding:15px"><div style="width:18px;height:18px;" class="abcRioButtonSvgImageWithFallback abcRioButtonIconImage abcRioButtonIconImage18"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 48 48" class="abcRioButtonSvg"><g><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"></path><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"></path><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"></path><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"></path><path fill="none" d="M0 0h48v48H0z"></path></g></svg></div></div><span style="font-size:16px;line-height:48px;" class="abcRioButtonContents"><span id="not_signed_inwne1r5y73z53">Sign in with Google</span><span id="connectedwne1r5y73z53" style="display:none">Signed in with Google</span></span></div></div></div>
+      <script>
+        function onSuccess(googleUser) {
+          console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+        }
+        function onFailure(error) {
+          console.log(error);
+        }
+        function renderButton() {
+          gapi.signin2.render('my-signin2', {
+            'scope': 'profile email',
+            'width': 240,
+            'height': 50,
+            'longtitle': true,
+            'theme': 'dark',
+            'onsuccess': onSuccess,
+            'onfailure': onFailure
+          });
+        }
+      </script>
+    
+      <script src="./platform.js.download" async="" defer="" gapi_processed="true"></script>
+    
+    <!-- [END body] -->
+    
+    
+      
+    <iframe id="ssIFrame_google" sandbox="allow-scripts allow-same-origin" aria-hidden="true" frame-border="0" style="position: absolute; width: 1px; height: 1px; inset: -9999px; display: none;" src="./iframe.html"></iframe></body>
+</div>
+
+<script>
+
+// Get the modal 
+
+var modal = document.getElementById
+('id01');
+
+// When the user clicks anywhere
+outside of the modal, close it 
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+     modal.style.display = "none";
+    }
+}
+</script>
+
+<style>
+body {
+    margin: 1;
+    font-family: 'Lato', sans-serif;
+}
+
+.overlay {
+   height: 0%;
+   width: 100%;
+   position: fixed;
+   z-index: 1;
+   top: 0;
+   left: 0;
+   background-color: rgb(0,0,0);
+   background-color: rgba(0,0,0,0.9);
+   overflow-y: hidden;
+   transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px){
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+</style>
+
+<body>
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)"
+  class="closebtn"
+  onclick="closeNav()">×</a>
+  <div class="overlay-content">
+<button onclick="document.
+getElementById('<h3>about</h3>')
+                             ( ''Reffera'')
+.style.display='block'"
+style="width:auto;">about
+</button>
+</div>
+</div>
+<body>
+<div>
+
+</body>
+</html>
+
+
